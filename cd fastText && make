@@ -1,4 +1,6 @@
-./fasttext
 wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/cooking.stackexchange.tar.gz && tar xvzf cooking.stackexchange.tar.gz
 head cooking.stackexchange.txt
 wc cooking.stackexchange.txt
+head -n 12404 cooking.stackexchange.txt > cooking.train
+tail -n 3000 cooking.stackexchange.txt > cooking.valid
+./fasttext supervised -input cooking.train -output model_cooking
