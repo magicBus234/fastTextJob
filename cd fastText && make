@@ -1,1 +1,4 @@
 ./fasttext
+wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/cooking.stackexchange.tar.gz && tar xvzf cooking.stackexchange.tar.gz
+head cooking.stackexchange.txt
+wc cooking.stackexchange.txt
